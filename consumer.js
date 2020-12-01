@@ -10,7 +10,7 @@ async function connect(){
         channel.consume("jobs", message => {
             const input = JSON.parse(message.content.toString());
             console.log(`Recieved job with input ${input.number}`);
-            if(input.number == 19){
+            if(input.number == 17){
                 channel.ack(message);
             }
         })
